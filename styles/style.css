@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*----variaveis----*/
+:root{
+    --cor-primaria: #293246;
+    --cor-secundaria:#545B77;
+    --cor-terciaria: #F2D8D8;
+
+    --fonte-primaria: "Poppins", sans-serif;;
+    --fonte-secundaria: "Radio Canada Big", sans-serif;
+
+    --fonte-big: 2.25rem;
+    --fonte-mid: 1.5rem;
+}
+
+/*------reset css -----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria); 
+}
+
+
+/*----- header-----*/
+
+.cabecalho{
+    padding: 2% 0% 0% 0%;
+}
+
+.cabecalho__navegacao{
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    font-size: var(--fonte-mid);
+    font-weight: 600;
+}
+.cabecalho__texto{
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+li:hover{
+    cursor: pointer;
+    border-bottom: solid var(--cor-primaria);
+}
+
+/*-------icones-------*/
+.material-icons{
+    color: var(--cor-primaria);
+    display: inline-block;
+    vertical-align:middle;
+    margin-top: -6px;
+}
+
+.icon-task{
+    padding-right: 15px;
+    color: var(--cor-terciaria);
+}
+
+.fa-brands, .fa-solid {
+    padding: 5px;
+    padding-right: 15px;
+}
+
+.fa-brands {
+    color: var(--cor-terciaria);
+}
+
+.fa-solid {
+    color: var(--cor-primaria);
+}
+
+
+
+/*----animacao texto----*/
+#sobrenome-autor::after{
+    content:"|";
+    animation: cursor 0.65s infinite;
+}
+
+@keyframes cursor {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/*main - 1 e 2*/
+.titulo__destaque{
+    color: var(--cor-primaria);
+}
+.apresentacao{
+    padding: 8% 14%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+
+}
+.apresentacao__conteudo__imagem{
+    width: 40%;
+    border-inline-end: 5px solid;
+    border-block-end: 5px solid ;
+    border-radius: 10px;
+}
+
+.apresentacao__conteudo__imagem__habilidades{
+    width: 40%;
+    box-shadow: 10px 5px;
+    border-radius: 250px;
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 36px;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size:var(--fonte-mid);
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+    
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    
+}
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: var(--fonte-mid);
+
+}
+.apresentacao__links__social{
+    width: 80%;
+    text-align: center;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 16px;
+    font-size: var(--fonte-mid);
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+}
+.apresentacao__links__social:hover{
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+}
+
+
+/*---------footer----------*/
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-top: 2px solid var(--cor-primaria);
+    padding: 20px;
+}
+.rodape__imagem{
+    width: 10%;
+}
+.rodape__paragrafo{
+    font-family: var(--fonte-secundaria);
+}
+
+/*main projetos*/
+
+.projeto__apresentacao{
+    padding: 8% 14%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projeto__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.projeto__conteudo__titulo{
+    font-size: 36px;
+    font-family: var(--fonte-primaria);
+}
+.projeto__titulo__destaque{
+    color: var(--cor-primaria);
+}
+/*---animacao texto p---*/
+#projeto-strong::after{
+    content:"|";
+    animation: cursorProjeto 0.65s infinite;
+}
+
+@keyframes cursorProjeto {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.projeto__texto__paragrafo{
+    font-size: var(--fonte-mid);
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+}
+
+.projeto__imagem{
+    flex-direction: row;
+}
+
+.projeto__imagem__feitos{
+    width:27%;
+    margin: 25px;
+    border-inline-end: 3px solid;
+    border-block-end: 3px solid ;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*responsividade*/
+
+@media (max-width: 1155px)  { 
+    .cabecalho{
+        padding:5%;
+    }
+    .cabecalho__navegacao{
+        justify-content: center;
+        gap:30px
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+    .apresentacao__conteudo{
+        width: 300px;
+    }
+    .apresentacao__conteudo__imagem, .apresentacao__conteudo__imagem__habilidades{
+        width: 80%;
+    }
+    .apresentacao__conteudo__imagem__habilidades{
+        border-radius: 400px;
+    }
+    .rodape__imagem{
+        width: 22%;
+    }
+    .projeto__apresentacao{
+        flex-direction: column;
+    }
+    .projeto__imagem__feitos{
+        width: 80%;
+    }
+}
+@media (max-width: 573px) {
+    .cabecalho__texto{
+        font-size: 15px;
+    } 
+    .fa-solid{
+        font-size:16px;
+        padding-right: 2px;
+    }
+    .apresentacao__conteudo__titulo, .projeto__conteudo__titulo{
+        font-size: 26px;
+    }
+    .apresentacao__conteudo__texto, .projeto__texto__paragrafo, .rodape__paragrafo{
+        font-size: 16px;
+    }
+    .apresentacao__links__subtitulo, .apresentacao__links__social{
+        font-size: 20px;
+    }
+    .apresentacao__conteudo__imagem__habilidades{
+        box-shadow: 7px 7px;
+    }
+}
+@media (max-width: 365px) {
+    .fa-solid{
+        font-size:15px;
+        padding: 0;
+    }
+}
+   
+
+   
